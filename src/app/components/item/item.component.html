@@ -1,0 +1,12 @@
+<div class="card mb-2">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        {{item.title}}
+        <div>
+            <button class="btn btn-primary" (click)="item.hide = !item.hide">Show</button>
+            <button class="btn btn-danger" (click)="deleteItem(item)">Delete</button>
+        </div>
+    </div>
+    <div class="card-body" [hidden]="item.hide">
+        {{item.description}}
+    </div>
+</div>
